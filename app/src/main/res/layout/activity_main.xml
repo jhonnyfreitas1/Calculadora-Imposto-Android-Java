@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center|top"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E7E7E7">
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#64Ffff"
+            android:gravity="center"
+            android:text="Calculadora Imposto de renda"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/titulo_rendaanual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Renda anual (rendimentos debitaveis)"
+            android:gravity="center"
+
+            android:layout_below="@+id/logo"
+            />
+        <EditText
+            android:id="@+id/rendaanual"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/titulo_rendaanual"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:ems="18"
+            android:hint="R$ 00.000.00"
+            android:inputType="number"
+            android:padding="6dp"
+            android:radius="10sp"
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/titulo_irrf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Imposto retido na fonte"
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/rendaanual"
+            />
+        <EditText
+            android:id="@+id/irrf"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/titulo_irrf"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:ems="9"
+            android:hint="R$ 00.000.00"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/titulo_dependentes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Numero de dependentes"
+            android:gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/rendaanual"
+            />
+        <EditText
+            android:id="@+id/dependentes"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/titulo_dependentes"
+            android:layout_margin="10dp"
+            android:maxLength="2"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/irrf"
+            android:background="#ffffff"
+            android:ems="9"
+            android:hint="Ex: 2"
+            android:inputType="number"
+            android:padding="6dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/titulo_pensao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gastos pensão "
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/irrf"
+            />
+        <EditText
+            android:id="@+id/pensao"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/titulo_pensao"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:ems="9"
+            android:hint="R$ 00.000.00"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/titulo_ensino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gastos com ensino"
+            android:gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/dependentes"
+            />
+        <EditText
+            android:id="@+id/ensino"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/titulo_ensino"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/pensao"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="R$ 00.000.00"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/titulo_medico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Despesas medicas"
+            android:gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/pensao"
+            />
+        <EditText
+            android:id="@+id/medico"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/titulo_medico"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:ems="9"
+            android:hint="R$ 00.000.00"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/titulo_inss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previdencia social"
+            android:gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/ensino"
+            />
+        <EditText
+            android:id="@+id/inss"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/titulo_inss"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/medico"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint=" R$ 00.000.00"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inss"
+            android:layout_margin="10dp"
+            android:background="#64Ffff"
+            android:text="Calcular"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="bottom"
+            android:text="aasdas2"
+            android:textColor="#010102"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
